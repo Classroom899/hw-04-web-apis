@@ -17,20 +17,32 @@
 
     <section class="test">
         <div>
-            <p>Coding Quiz Challenge!</p> 
+            <p>Coding Quiz Challenge!</p>
 
             <br>
 
-            <button type="button" class="btn btn-primary" onclick="startQuiz()" id="startButton">Start</button>
-            
+
+
 
 
         </div>
     </section>
 
-    <div id="questions"></div>
+    <div class="container">
+        <div id="question-container" class="hide"></div>
+        <div id="questions">Questions</div>
+        <div id="answer-buttons" class="btn-grid"></div>
+            <button class="answer-button">Answer A</button>
+            <button class="answer-button">Answer B</button>
+            <button class="answer-button">Answer C</button>
+            <button class="answer-button">Answer D</button>
+        <div class="control-buttons">
+            <button type="button" class="btn btn-primary" onclick="startQuiz()" id="startButton">Start</button>
+            <button type="button" class="btn btn-primary hide" onclick="nextQuestion()" id="nextButton">Next</button>
+        </div>
+    </div>
 
-    <div id="answers"></div>
+    
 
     <div id="answers-left"></div>
 

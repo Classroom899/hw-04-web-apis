@@ -23,9 +23,9 @@ var questions = [{
         "B: A place",
         "C: An inner HTML element",
         "D: A new function",
-        ]
-    },
-    {
+    ]
+},
+{
     "question": "What does null represent?",
     "answer": [
         "A: A new game coming out",
@@ -34,8 +34,8 @@ var questions = [{
         "D: An SQL element",
 
     ]
-    },
-    {
+},
+{
     "questiom": "What kind of number does Math.random return?",
     "answer": [
         "A: An integer",
@@ -43,7 +43,7 @@ var questions = [{
         "C: A whole number",
         "D: Nothing",
     ]
-    }
+}
 ];
 
 
