@@ -20,6 +20,12 @@
 
 #main-container {
     text-align: center;
+    align-items: center;
+    width: 800px;
+    max-width: 80%;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px 2px;
 
 
 }
@@ -31,6 +37,11 @@
 
 #question-container {
     display: inline-block;
+    width: 800px;
+    max-width: 80%;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px 2px;
 
 } */
 
