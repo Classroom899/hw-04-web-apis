@@ -1,20 +1,3 @@
-//Flash card quiz idea
-
-// Given I am taking a code quiz:
-//When I click the start button: So we need to add in here a start timer button
-
-function startQuiz() {
-    document.getElementById("startButton").innerHTML = "Start";
-}
-
-
-// My array of questions for the quiz game and we also need to show the questions in some way or so to say, display them
-
-var questionElement = document.getElementById("questions");
-var answersElement = document.getElementById("answers");
-var answersLeft = document.getElementById("answers-left");
-var answersRight = document.getElementById("answers-right");
-
 //Create an array to start off with that includes question objects. Then I want to create a for loop to go through that array and ask each question individually while simultaneously tracking the number of questions being answered correctly and keeping score.
 var questions = [{
     "question": "What is a string?",
@@ -36,7 +19,7 @@ var questions = [{
     ]
 },
 {
-    "questiom": "What kind of number does Math.random return?",
+    "question": "What kind of number does Math.random return?",
     "answer": [
         "A: An integer",
         "B: floating-point",
@@ -45,6 +28,93 @@ var questions = [{
     ]
 }
 ];
+
+var minutesDisplay = document.querySelector("#minutes");
+var secondsDisplay = document.querySelector("#seconds");
+var questionElement = document.getElementById("questions");
+var answersElement = document.getElementById("answers");
+var answersLeft = document.getElementById("answers-left");
+var answersRight = document.getElementById("answers-right");
+
+
+
+
+//Flash card quiz idea
+
+// Given I am taking a code quiz:
+//When I click the start button: So we need to add in here a start timer button
+
+function startQuiz() {
+    startTimer();
+}
+
+//We all need our start timer function going once we hit startQuiz
+
+function startTimer() {
+    //This will be my spot to start writing the code for the timer
+    document.getElementById("startButton").disabled = true;
+    var totalSeconds = 180;
+    var totalMinutes = 3;
+        // Write code to start the timer here
+        minutesDisplay.innerText = formatMinutes(totalSeconds) //This will get us our minutes 
+        secondsDisplay.innerText = formatSeconds(totalSeconds)
+        var timeInterval = setInterval(function() {
+          totalSeconds--; //Subtract 1
+          minutesDisplay.innerText = formatMinutes(totalSeconds)
+          secondsDisplay.innerText = formatSeconds(totalSeconds)
+        }, 1000);
+      
+      if (totalSeconds === 0) {
+        clearInterval(timeInterval);
+        alert("Time to take a breat");
+      }
+}
+function displayQuestion(count) {
+    var paramQuestion = questions[count]
+    questionElement.innerText = paramQuestion.question
+    var questionArray = paramQuestion.answer
+    for (var i = 0; i < questionArray.length; i++) {
+        document.getElementById("answer" + (i+1)).innerText = questionArray[i] //Setting what that id is at the end and putting each sequential answer in each element
+    }
+
+
+}
+
+displayQuestion(0); //Calling question 1
+
+function formatSeconds(seconds) {
+    //We are doing a function called formatSeconds, first thing we want is consolelog seconds inside formatSEconds
+    var secondsLeftOver = seconds % 60
+    
+    if (secondsLeftOver >= 10) {
+      return secondsLeftOver;
+    }
+    else if(secondsLeftOver < 10) {
+      return "0" + secondsLeftOver;
+    }
+    
+    
+    
+    
+    }
+    
+    
+    function formatMinutes(seconds) { //Parameter still  needs to be seconds. //We can name parameters anything as long as you reference them later
+    var minutesLeftOver = seconds / 60
+    return Math.floor(minutesLeftOver);
+    
+    
+    
+    }
+
+
+
+
+// My array of questions for the quiz game and we also need to show the questions in some way or so to say, display them
+
+
+
+
 
 
 // Question tracker
@@ -69,4 +139,10 @@ alert("Scored: " + score + "/" + questions.length);
     // } while (existingQuestions());
 
     // display.innerHTML += questions[randomQuestion].a;
+
+
+
+    //Figure out a way for the display changes and change the count for a new question to be there
+
+    //Get rid of the next button and just have the answer itself be the way it goes to the next question
 

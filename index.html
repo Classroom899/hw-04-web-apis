@@ -28,21 +28,53 @@
         </div>
     </section>
 
-    <div class="container">
-        <div id="question-container" class="hide"></div>
-        <div id="questions">Questions</div>
-        <div id="answer-buttons" class="btn-grid"></div>
-            <button class="answer-button">Answer A</button>
-            <button class="answer-button">Answer B</button>
-            <button class="answer-button">Answer C</button>
-            <button class="answer-button">Answer D</button>
-        <div class="control-buttons">
-            <button type="button" class="btn btn-primary" onclick="startQuiz()" id="startButton">Start</button>
-            <button type="button" class="btn btn-primary hide" onclick="nextQuestion()" id="nextButton">Next</button>
+    <section id="main-container">
+        <div class="new">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Coding Quiz</h5>
+                    <p class="card-text">Take this practice quiz and test your knowledge. Start below by clicking the
+                        start
+                        button. Good luck!</p>
+                    <button type="button" class="btn btn-primary" onclick="startQuiz()" id="startButton">Start</button>
+                </div>
+            </div>
+            <div id="question-container" class="hide">
+                <div id="questions">questions</div>
+                <div id="answer-buttons" class="btn-grid"></div>
+                <button class="answer-button" id="answer1">Answer A</button>
+                <button class="answer-button" id="answer2">Answer B</button>
+                <button class="answer-button" id="answer3">Answer C</button>
+                <button class="answer-button" id="answer4">Answer D</button>
+
+                <div class="time">
+                    <div id="minutes">3</div>
+                    <div id="seconds">00</div>
+                </div>
+
+
+
+                <button type="button" class="btn btn-primary hide" onclick="nextQuestion()"
+                    id="nextButton">Next</button>
+
+            </div>
+
         </div>
+
+
+
+    </section>
+
+
+
+    <div class="control-buttons">
+
+
     </div>
 
-    
+
+
 
     <div id="answers-left"></div>
 

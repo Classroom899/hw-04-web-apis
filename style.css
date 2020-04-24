@@ -13,6 +13,43 @@
     text-align: center;
 }
 
-.btn-grid {
-    
+/* .hide {
+    visibility: hidden;
+
+} */
+
+#main-container {
+    text-align: center;
+
+
 }
+
+/* .card {
+    display: inline-block;
+
+}
+
+#question-container {
+    display: inline-block;
+
+} */
+
+.new {
+    display: inline-block;
+}
+
+.time {
+    width: 100%;
+    text-align: center;
+  }
+
+  #minutes {
+    font-size: 6em;
+    float: left;
+    margin-left: 25%;
+  }
+  
+  #seconds {
+    font-size: 4em;
+    float: left;
+  }
