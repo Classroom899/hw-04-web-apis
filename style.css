@@ -64,3 +64,9 @@
     font-size: 4em;
     float: left;
   }
+
+
+  .answer-button {
+    display: grid;
+
+  }
