@@ -45,7 +45,7 @@ var answersRight = document.getElementById("answers-right");
 //When I click the start button: So we need to add in here a start timer button
 
 function startQuiz() {
-    startTimer();
+    
 }
 
 //We all need our start timer function going once we hit startQuiz
