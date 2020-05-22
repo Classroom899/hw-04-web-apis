@@ -1,3 +1,3 @@
-# hw-04-web-apis
+# hw-04-javascript-quiz
 Homework #4
 
